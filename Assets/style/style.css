@@ -720,9 +720,41 @@ body::-webkit-scrollbar {
   margin-left: 1.3rem;
 }
 
-.services {
+.service {
   max-width: 60vw;
   margin: 10rem auto;
+}
+
+.service-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.service-card:not(:last-child) {
+  margin-top: 1.5rem;
+}
+
+.service-card:not(:last-child):hover #light, .service-card:not(:last-child):hover #dark1 {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+#darkGroup {
+  fill: var(--color-secondary);
+  opacity: 2;
+}
+
+#light, #dark1 {
+  -webkit-transform: translate(1.5rem);
+          transform: translate(1.5rem);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 .active {

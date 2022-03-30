@@ -642,10 +642,33 @@ body {
   }
 }
 
-.services{
+.service{
   max-width: 60vw;
   margin: 10rem auto;
+
+  &-card{
+    display: flex;
+    align-items:center;
+    &:not(:last-child){
+      margin-top: 1.5rem;
+
+      &:hover #light, &:hover #dark1{
+        transform: translate(0);
+      }
+    }
+  }
 }
+
+#darkGroup{
+  fill: var(--color-secondary);
+  opacity: 2;
+}
+
+#light, #dark1{
+  transform: translate(1.5rem);
+  transition: transform 1s ease-in-out;
+}
+
 
 
 
