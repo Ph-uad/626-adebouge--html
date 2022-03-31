@@ -201,7 +201,9 @@ body {
 }
 
 .link {
-  &,&:active {
+
+  &,
+  &:active {
     display: block;
     text-decoration: none;
     max-width: 20rem;
@@ -278,7 +280,8 @@ body {
     }
   }
 
-  &-link, &link:active{
+  &-link,
+  &link:active {
     text-decoration: none;
     color: var(--color-secondary);
     font-weight: 700;
@@ -319,12 +322,13 @@ body {
     }
   }
 }
+
 //
 
 //Hero
 .hero {
   height: 100vh;
-  overflow-y: hidden ;
+  overflow-y: hidden;
   background: linear-gradient(to right,
       rgba(2, 2, 2, 0) 60%,
       rgba(255, 255, 255, 0.2)),
@@ -349,7 +353,7 @@ body {
   &-container {
     height: 50%;
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     align-items: center;
   }
 
@@ -412,6 +416,7 @@ body {
     }
   }
 }
+
 //
 
 
@@ -447,6 +452,7 @@ body {
     padding: 1rem;
   }
 }
+
 //
 
 //Philosophy
@@ -454,6 +460,7 @@ body {
   max-width: 60rem;
   margin: 0 auto;
 }
+
 //
 
 //about
@@ -511,6 +518,7 @@ body {
     }
   }
 }
+
 // 
 
 /* Timeline */
@@ -746,11 +754,11 @@ body {
 
 
     @media (max-width:60em) {
-      &{
+      & {
         max-width: 90%;
         margin: 7rem auto;
       }
-      
+
     }
   }
 
@@ -803,6 +811,13 @@ body {
 .service {
   max-width: 60vw;
   margin: 10rem auto;
+
+  @media (max-width: 56.25em) {
+    & {
+      max-width: 90rem;
+    }
+
+  }
 
   &-card {
     display: flex;

@@ -662,6 +662,11 @@ body::-webkit-scrollbar {
   max-width: 60vw;
   margin: 10rem auto;
 }
+@media (max-width: 56.25em) {
+  .service {
+    max-width: 90rem;
+  }
+}
 .service-card {
   display: flex;
   align-items: center;
