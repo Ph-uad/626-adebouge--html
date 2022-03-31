@@ -347,7 +347,7 @@ body {
   &-container {
     height: 50vh;
     display: flex;
-    margin-left: 20rem;
+    justify-content: center ;
     align-items: center;
   }
 
@@ -360,14 +360,11 @@ body {
     margin: 3rem 0;
   }
 
-  &-subtitle {
-    margin-left: 2rem;
-    animation: animate-fade 2s ease-in-out 0.1s both;
-  }
-
   &-message {
     font-size: 2rem;
     text-indent: 2rem;
+    margin-left: 2rem;
+    animation: animate-fade 2s ease-in-out 0.1s both;
   }
 
   &-card {
