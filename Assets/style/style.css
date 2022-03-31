@@ -273,21 +273,22 @@ body::-webkit-scrollbar {
 
 .hero {
   height: 100vh;
+  overflow-y: hidden;
   background: linear-gradient(to right, rgba(2, 2, 2, 0) 60%, rgba(255, 255, 255, 0.2)), url("../images/hero.jpg");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  padding: 10rem 0;
+  padding: 10rem 5rem;
 }
 @media (max-width: 56.25em) {
   .hero {
-    padding: 10rem 0;
-    height: 100vh;
+    height: 120vh;
+    padding: 3rem;
     background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.55)), url("../images/hero-small.jpg");
   }
 }
 .hero-container {
-  height: 50vh;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
