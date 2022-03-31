@@ -583,7 +583,6 @@ body::-webkit-scrollbar {
   height: 12rem;
   width: 18rem;
   transform: translateY(-5%);
-  background-color: #00adff;
   -webkit-clip-path: circle(45% at 50% 50%);
           clip-path: circle(45% at 50% 50%);
   shape-outside: circle(50% at 50% 50%);
@@ -650,7 +649,6 @@ body::-webkit-scrollbar {
   .team-container {
     max-width: 90%;
     margin: 7rem auto;
-    background: #00adff;
   }
 }
 .team-text {

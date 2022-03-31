@@ -704,7 +704,6 @@ body {
     height: 12rem;
     width: 18rem;
     transform: translateY(-5%);
-    background-color: #00adff;
     clip-path: circle(45% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
   }
@@ -790,7 +789,6 @@ body {
       &{
         max-width: 90%;
         margin: 7rem auto;
-        background: #00adff;
       }
       
     }
@@ -813,10 +811,6 @@ body {
   &-picture {
     flex: 0 1 20%;
     border-radius: 50%;
-    
-
-    @media (max-width: 60em) {
-    }
   }
 
   &-img {
