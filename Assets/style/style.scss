@@ -775,6 +775,7 @@ body {
 
 //team
 .team {
+
   height: 60vh;
 
   &-container {
@@ -783,21 +784,21 @@ body {
     align-items: center;
     max-width: 60%;
     margin: 5rem auto;
-  }
 
 
-  @media (max-width: 56.25em) {
-    & {
-      padding: 10rem 0;
-      height: 50vh;
-      flex-direction: column-reverse;
-      margin: 6rem auto;
+    @media (max-width:60em) {
+      &{
+        max-width: 90%;
+        margin: 7rem auto;
+        background: #00adff;
+      }
+      
     }
   }
 
   &-text {
     font-size: 2.5rem;
-    flex: 0 1 75%;
+    flex: 0 1 70%;
     text-align: left;
   }
 
@@ -812,12 +813,9 @@ body {
   &-picture {
     flex: 0 1 20%;
     border-radius: 50%;
+    
 
-    @media (max-width: 56.25em) {
-      & {
-        flex: 0 1 10%;
-        box-shadow: none;
-      }
+    @media (max-width: 60em) {
     }
   }
 
@@ -826,10 +824,10 @@ body {
     clip-path: circle(48% at 50%);
     transform: translateY(2px);
 
-    @media (max-width: 56.25em) {
+    @media (max-width: 60em) {
       & {
         width: 80%;
-        transform: translate(10rem, 2px);
+        transform: translate(1rem, -2px);
       }
     }
   }
@@ -843,8 +841,6 @@ body {
     font-weight: 300;
     margin: 0;
   }
-
-
 }
 
 //
