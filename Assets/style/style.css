@@ -489,48 +489,18 @@ body::-webkit-scrollbar {
   margin-top: 1.8rem;
 }
 
-.portfolio-section {
-  margin-top: 10rem;
-}
-.portfolio-container {
-  margin-top: 5rem;
-  max-width: 70vw;
-  margin: 0rem auto;
-  gap: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-}
-@media (max-width: 56.25em) {
-  .portfolio-container {
-    display: block;
-  }
-}
-.portfolio-card {
-  flex: 0 1 40%;
-  margin: 1.5rem auto;
-}
-@media (max-width: 56.25em) {
-  .portfolio-card {
-    max-width: 100vw;
-  }
-}
-.portfolio-title {
-  font-size: 3rem;
-}
-.portfolio-time {
-  font-size: 2rem;
-  display: block;
-  margin-left: 1rem;
-}
-.portfolio-time:nth-child(2n-1) {
-  font-size: 1.6rem;
-}
-
 .portfolio {
   width: 80vw;
   height: 60rem;
   margin: 0 auto;
+}
+@media (max-width: 60em) {
+  .portfolio {
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
 }
 .portfolio-img {
   width: 100%;
