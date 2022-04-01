@@ -4,7 +4,8 @@
   --color-secondary: #131336;
   --color-secondary-light: #2b2b3d;
   --color-white: #f3f2f2;
-  --color-silver: #c7c8ca --color-gray: #555;
+  --color-silver: #c7c8ca;
+  --color-gray: #555;
   --color-white-light: #efeff0c0;
   --color-black: #252827;
 }
@@ -272,19 +273,19 @@ body::-webkit-scrollbar {
 }
 
 .hero {
-  height: 100vh;
-  overflow-y: hidden;
-  background: linear-gradient(to right, rgba(2, 2, 2, 0) 60%, rgba(255, 255, 255, 0.2)), url("../images/hero.jpg");
+  height: 80vh;
+  background: linear-gradient(to right, rgba(2, 2, 2, 0.7) 60%, rgba(5, 5, 5, 0.2)), url("../images/aron-visuals-bZZp1PmHI0E-unsplash.jpg");
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   background-repeat: no-repeat;
-  padding: 10rem 5rem;
+  padding: 5rem;
+  margin-bottom: 15rem;
 }
 @media (max-width: 56.25em) {
   .hero {
     height: 120vh;
     padding: 3rem;
-    background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.55)), url("../images/hero-small.jpg");
+    background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.55)), url("../images/aron-small.jpg");
   }
 }
 .hero-container {
@@ -295,6 +296,7 @@ body::-webkit-scrollbar {
 }
 .hero-text {
   font-size: 2rem;
+  color: var(--color-white);
 }
 .hero-title {
   font-weight: 500;
@@ -308,16 +310,17 @@ body::-webkit-scrollbar {
           animation: animate-fade 2s ease-in-out 0.1s both;
 }
 .hero-card {
-  max-width: 70vw;
-  position: relative;
+  max-width: 60vw;
+  position: absolute;
+  transform: translate(25%, 50%);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
   padding: 5rem;
   font-size: 1.6rem;
-  background: #ebecee;
-  box-shadow: 28px 28px 56px #d6d8d9, -28px -28px 56px #dcdfe0;
+  background: var(--color-white);
+  box-shadow: 8px 8px 16px var(--color-secondary-light), -8px -8px 16px var(--color-secondary);
 }
 @media (max-width: 60em) {
   .hero-card {
@@ -356,20 +359,49 @@ body::-webkit-scrollbar {
   }
 }
 .pledge-card {
-  flex: 1 1 48%;
+  flex: 0 1 40%;
   margin: 10rem auto;
-  padding: 3rem;
+  overflow: hidden;
   text-align: left;
   border-radius: 7px;
   -webkit-backdrop-filter: blur(14px);
           backdrop-filter: blur(14px);
   border-radius: 10px;
+  transition: transform 0.3s ease-in;
+}
+.pledge-card:hover {
+  transform: translateY(-3rem);
+}
+.pledge-card-message {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(1, 1, 1, 0.6823529412);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  width: 100%;
+  padding: 3rem;
+  color: var(--color-white);
 }
 .pledge-icon {
   width: 7rem;
   position: absolute;
   top: -10%;
   padding: 1rem;
+  fill: var(--color-white);
+}
+.pledge-vision, .pledge-mission {
+  height: 60rem;
+  position: relative;
+}
+.pledge-vision {
+  background: url(../images/vision.jpg) center center no-repeat;
+}
+.pledge-mission {
+  background: url(../images/mission.jpg) center center no-repeat;
+}
+.pledge-paragraph {
+  text-indent: 0;
 }
 
 .philosophy {
@@ -487,28 +519,6 @@ body::-webkit-scrollbar {
   font-size: 1.6rem;
   font-weight: 300;
   margin-top: 1.8rem;
-}
-
-.portfolio {
-  width: 80vw;
-  height: 60rem;
-  margin: 0 auto;
-}
-@media (max-width: 60em) {
-  .portfolio {
-    display: none;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-}
-.portfolio-img {
-  width: 100%;
-  height: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 90%);
-          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 90%);
-  position: relative;
-  border-radius: 0.5rem;
 }
 
 .profile-team {
@@ -662,9 +672,9 @@ body::-webkit-scrollbar {
   max-width: 60vw;
   margin: 10rem auto;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 60.5em) {
   .service {
-    max-width: 90rem;
+    max-width: 90vw;
   }
 }
 .service-card {
