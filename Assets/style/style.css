@@ -23,9 +23,14 @@ html {
   line-height: 1.6;
   font-size: 62.5%;
 }
-@media (max-width: 75em) {
+@media (max-width: 77.75em) {
   html {
     font-size: 56.5%;
+  }
+}
+@media (max-width: 58em) {
+  html {
+    font-size: 52%;
   }
 }
 @media (max-width: 56.25em) {
@@ -59,6 +64,11 @@ body::-webkit-scrollbar {
   font-size: 10rem;
   text-transform: capitalize;
   font-family: "Raleway";
+}
+@media (max-width: 78.25em) {
+  .heading-jumbo {
+    font-size: 7rem;
+  }
 }
 @media (max-width: 56.25em) {
   .heading-jumbo {
@@ -109,12 +119,12 @@ body::-webkit-scrollbar {
   }
 }
 .heading-credit {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Raleway";
   font-weight: 100;
   padding: 1rem;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 78em) {
   .heading-credit {
     font-size: 2rem;
   }
@@ -175,18 +185,20 @@ body::-webkit-scrollbar {
   text-decoration: none;
   max-width: 20rem;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  font-weight: bolder;
   color: var(--color-secondary);
   text-transform: uppercase;
   margin-top: 2rem;
-  padding: 1rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   border: 0.2rem solid var(--color-secondary-light);
   position: relative;
   transition: all 0.4s ease-in-out;
 }
 @media (max-width: 56.25em) {
   .link, .link:active {
-    max-width: 60%;
+    font-size: 1.4rem;
+    max-width: 15rem;
   }
 }
 .link:hover, .link:active:hover {
@@ -197,7 +209,6 @@ body::-webkit-scrollbar {
 }
 
 .tilt {
-  box-shadow: -2px 1px 1px 2px var(--color-secondary-light);
   transform-style: preserve-3d;
   transform: perspective(1000px) translateZ(20px);
 }
@@ -273,47 +284,40 @@ body::-webkit-scrollbar {
 }
 
 .hero {
-  height: 80vh;
+  height: 90vh;
   background: linear-gradient(to right, rgba(2, 2, 2, 0.7) 60%, rgba(5, 5, 5, 0.2)), url("../images/aron-visuals-bZZp1PmHI0E-unsplash.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 5rem;
-  margin-bottom: 15rem;
+  margin-bottom: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 @media (max-width: 56.25em) {
   .hero {
-    height: 120vh;
+    height: 90vh;
     padding: 3rem;
-    background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.55)), url("../images/aron-small.jpg");
+    background: linear-gradient(to right, rgba(2, 2, 2, 0.7) 60%, rgba(5, 5, 5, 0.2)), url("../images/aron-small.jpg");
   }
-}
-.hero-container {
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .hero-text {
   font-size: 2rem;
   color: var(--color-white);
+  padding-top: 15rem;
 }
 .hero-title {
   font-weight: 500;
   margin: 3rem 0;
 }
 .hero-message {
-  font-size: 2rem;
-  text-indent: 2rem;
-  margin-left: 2rem;
   -webkit-animation: animate-fade 2s ease-in-out 0.1s both;
           animation: animate-fade 2s ease-in-out 0.1s both;
 }
 .hero-card {
-  max-width: 60vw;
-  position: absolute;
-  transform: translate(25%, 50%);
-  margin: 0 auto;
+  max-width: 60%;
+  transform: translate(0%, 50%);
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
@@ -322,14 +326,23 @@ body::-webkit-scrollbar {
   background: var(--color-white);
   box-shadow: 8px 8px 16px var(--color-secondary-light), -8px -8px 16px var(--color-secondary);
 }
+@media (max-width: 85em) {
+  .hero-card {
+    font-size: 1.4rem;
+    max-width: 70%;
+    transform: translate(0, 10%);
+  }
+}
 @media (max-width: 60em) {
   .hero-card {
+    transform: translate(0, 20%);
     padding: 3rem;
   }
 }
 @media (max-width: 40em) {
   .hero-card {
     display: block;
+    margin: 0% auto;
   }
 }
 .hero-row1 {
@@ -348,10 +361,11 @@ body::-webkit-scrollbar {
 }
 
 .pledge-container {
+  opacity: 0;
   display: flex;
   gap: 2rem;
-  max-width: 60vw;
-  margin: 0 auto;
+  max-width: 65vw;
+  margin: 10% auto;
 }
 @media (max-width: 60em) {
   .pledge-container {
@@ -359,7 +373,7 @@ body::-webkit-scrollbar {
   }
 }
 .pledge-card {
-  flex: 0 1 40%;
+  flex: 0 1 45%;
   margin: 10rem auto;
   overflow: hidden;
   text-align: left;
@@ -410,115 +424,37 @@ body::-webkit-scrollbar {
 }
 
 .about {
-  width: 60vw;
-  margin: auto;
-  overflow-x: hidden;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 5rem;
 }
 @media (max-width: 56.25em) {
   .about {
     width: 80vw;
   }
 }
-.about-section {
+.about-container {
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10rem;
-}
-.about-hero {
-  margin: 2rem auto;
-  width: 101.394928rem;
-  height: 50.3rem;
-}
-@media (max-width: 56.25em) {
-  .about-hero {
-    width: 80vw;
-  }
 }
 .about-title {
-  text-align: center;
   margin: 3rem 0;
   font-weight: 500;
 }
 .about-story {
-  width: 98%;
+  width: 90%;
   margin: 0 auto;
 }
 .about-paragraph {
+  font-family: "Raleway";
   font-size: 2rem;
-  font-weight: 300;
-  color: var(--color-black);
+  font-weight: 500;
   word-spacing: 2px;
-  text-indent: 10rem;
+  text-indent: 10%;
 }
 .about-paragraph:not(:last-child) {
   margin-bottom: 2rem;
-}
-
-/* Timeline */
-.timeline {
-  border-left: 0.4rem solid var(--color-secondary-light);
-  border-bottom-right-radius: 0.4rem;
-  border-top-right-radius: 0.4rem;
-  color: var(--color-secondary);
-  font-family: inherit;
-  margin: 5rem 0 10rem 30%;
-  position: relative;
-  line-height: 2rem;
-  font-size: 1.5rem;
-  padding: 5rem;
-  list-style: none;
-  text-align: left;
-  font-weight: 100;
-  max-width: 50vw;
-}
-@media (max-width: 56.25em) {
-  .timeline {
-    margin: 5rem 0 0 10%;
-    max-width: 80vw;
-  }
-}
-.timeline-section {
-  margin-bottom: 10rem;
-}
-.timeline-event {
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
-  padding-bottom: 25px;
-  margin-bottom: 50px;
-  position: relative;
-}
-.timeline-event:last-of-type {
-  padding-bottom: 0;
-  margin-bottom: 0;
-  border: none;
-}
-.timeline-event:before, .timeline-event:after {
-  position: absolute;
-  display: block;
-  top: 0;
-}
-.timeline-img {
-  position: absolute;
-  top: 30%;
-  left: -15%;
-  z-index: 10;
-  width: 5rem;
-  border-radius: 10%;
-}
-@media (max-width: 56.25em) {
-  .timeline-img {
-    left: -19%;
-  }
-}
-@media (max-width: 36.25em) {
-  .timeline-img {
-    display: none;
-  }
-}
-.timeline-details {
-  font-size: 1.6rem;
-  font-weight: 300;
-  margin-top: 1.8rem;
 }
 
 .profile-team {
@@ -615,20 +551,29 @@ body::-webkit-scrollbar {
   margin-left: 1.3rem;
 }
 
-.team {
-  height: 60vh;
+.team-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+@media (max-width: 56.25em) {
+  .team-flex {
+    display: block;
+    margin: 1rem;
+  }
 }
 .team-container {
+  flex: 0 1 40%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 60%;
   margin: 5rem auto;
 }
 @media (max-width: 60em) {
   .team-container {
-    max-width: 90%;
-    margin: 7rem auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 .team-text {
@@ -647,6 +592,12 @@ body::-webkit-scrollbar {
   flex: 0 1 20%;
   border-radius: 50%;
 }
+@media (max-width: 60em) {
+  .team-picture {
+    flex: 0 1 90%;
+    margin: 0 auto;
+  }
+}
 .team-img {
   width: 100%;
   -webkit-clip-path: circle(48% at 50%);
@@ -655,8 +606,9 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 60em) {
   .team-img {
-    width: 80%;
-    transform: translate(1rem, -2px);
+    width: 50%;
+    margin: 0 auto;
+    transform: translate(50%, -2px);
   }
 }
 .team .parralax {
@@ -701,10 +653,15 @@ body::-webkit-scrollbar {
 }
 
 .active {
+  opacity: 1;
   -webkit-animation: fadeEffect 2s steps(30) forwards;
           animation: fadeEffect 2s steps(30) forwards;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+}
+
+.section {
+  margin: 5rem auto 0 auto;
 }
 
 @-webkit-keyframes animate-fade {
