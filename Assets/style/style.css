@@ -293,7 +293,7 @@ body::-webkit-scrollbar {
 
 .hero {
   height: 90vh;
-  background: linear-gradient(to right, rgba(2, 2, 2, 0.7) 60%, rgba(5, 5, 5, 0.2)), url("../images/aron-visuals-bZZp1PmHI0E-unsplash.jpg");
+  background: linear-gradient(to right, rgba(2, 2, 2, 0.7) 60%, rgba(5, 5, 5, 0.2)), url("../images/hero.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -554,7 +554,7 @@ body::-webkit-scrollbar {
   }
 }
 .team-container {
-  flex: 0 1 40%;
+  flex: 0 1 42%;
   display: flex;
   justify-content: space-between;
   align-items: center;

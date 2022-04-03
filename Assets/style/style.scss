@@ -342,7 +342,7 @@ body {
   background: linear-gradient(to right,
       rgba(2, 2, 2, .7) 60%,
       rgba(5, 5, 5, 0.2)),
-    url("../images/aron-visuals-bZZp1PmHI0E-unsplash.jpg");
+    url("../images/hero.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -651,7 +651,7 @@ body {
   }
 
   &-container {
-    flex: 0 1 40%;
+    flex: 0 1 42%;
     display: flex;
     justify-content: space-between;
     align-items: center;
