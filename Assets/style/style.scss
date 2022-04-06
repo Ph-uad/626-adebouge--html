@@ -213,6 +213,10 @@ body {
     -28px -28px 56px var(--color-white);
   border-radius: 5px;
 
+  @media (max-width:60em) {
+    padding: 3rem 2rem;
+  }
+
   &-title {
     font-size: 3rem;
     font-weight: bold;
@@ -360,6 +364,10 @@ body {
       rgba(2, 2, 2, .7) 60%,
       rgba(5, 5, 5, 0.2)),
         url("../images/aron-small.jpg");
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
     }
   }
 

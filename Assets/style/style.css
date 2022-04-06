@@ -183,6 +183,11 @@ body::-webkit-scrollbar {
   box-shadow: 28px 28px 56px var(--color-silver), -28px -28px 56px var(--color-white);
   border-radius: 5px;
 }
+@media (max-width: 60em) {
+  .card {
+    padding: 3rem 2rem;
+  }
+}
 .card-title {
   font-size: 3rem;
   font-weight: bold;
@@ -307,6 +312,9 @@ body::-webkit-scrollbar {
     height: 100vh;
     padding: 3rem;
     background: linear-gradient(to right, rgba(2, 2, 2, 0.7) 60%, rgba(5, 5, 5, 0.2)), url("../images/aron-small.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 .hero-text {
